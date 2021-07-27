@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+     Приветствие
+{% endblock %}
+
+{% block content %}
+    <h1>Hello, user!</h1>
+    <a href="{{ url_for('main') }}">Main page</a>
+{% endblock %}

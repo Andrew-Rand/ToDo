@@ -1,0 +1,15 @@
+body{
+    font-size: 18px;
+    color: black;
+    background-color: blanchedalmond;
+}
+
+.title{
+    font-size: x-large;
+}
+
+.form_task{
+    margin: 30px;
+    padding: 4px;
+    
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+     Main page
+{% endblock %}
+
+{% block content %}
+<h2>User`s tasks</h2>
+
+<form method="post" action="add_task">
+  <input type="text" name="header">
+  <input type="text" name="text">
+  <button type="submit">Add task</button>
+</form>
+
+<h3>Task`s list</h3>
+
+{% for task in tasks %}
+<div>
+  <span class="form_task"><b><u>{{ task.header }}</u></b> &nbsp;<i>{{ task.text }}</i></span>
+  <span class="form_task"><form method="POST" action="remove_task"><button type="submit">Remove task</button></form></span>
+</div>
+{% endfor %}
+
+{% endblock %}
