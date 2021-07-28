@@ -1,11 +1,13 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1111@localhost/tod'  # выбор базы данных
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1111@localhost/todo'  # выбор базы данных
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user='root', password='1111', server='localhost', database='todo')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # отключить ворнинг
 db = SQLAlchemy(app)
 
 
@@ -32,6 +34,32 @@ def hello():
 @app.route('/main')
 def main():
     return render_template('main.html')
+
+
+@app.route('/create', methods=['POST', 'GET'])  # url может отрабатывать в post (когда отправлка формы) либо прямой заход
+def create():
+    if request.method == "POST":
+
+        # 1) Заполняем переменные данными из формы
+
+        header = request.form['header']
+        intro = request.form['intro']
+        text = request.form['text']
+
+        # 2) Передаём данные в объект базы данных
+
+        task = Task(header=header, intro=intro, text=text)
+
+        # 3) Сохраняем объект в базу данных
+        try:
+            db.session.add(task)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "Задача не добавлена из-за критической ошибки"  # Добавь обработку разных ошибок
+
+    else:
+        return render_template('create.html')
 
 
 @app.route('/about')
