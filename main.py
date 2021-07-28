@@ -33,7 +33,8 @@ def hello():
 @app.route('/')
 @app.route('/main')
 def main():
-    return render_template('main.html')
+    tasks = Task.query.order_by(Task.date).all()  # получить все записи из БД отсортированные по полю date
+    return render_template('main.html', tasks=tasks)
 
 
 @app.route('/create', methods=['POST', 'GET'])  # url может отрабатывать в post (когда отправлка формы) либо прямой заход
@@ -60,6 +61,12 @@ def create():
 
     else:
         return render_template('create.html')
+
+
+@app.route('/tasks/<int:id>')
+def tasks_detail(id):
+    detail_task = Task.query.get(id)
+    return render_template('task_detail.html', task=detail_task)
 
 
 @app.route('/about')
