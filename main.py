@@ -5,7 +5,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1111@localhost/todo'  # выбор базы данных
+"app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1111@localhost/todo'  # выбор базы данных"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user='root', password='1111', server='localhost', database='todo')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # отключить ворнинг
 db = SQLAlchemy(app)
@@ -17,10 +17,10 @@ class Task(db.Model):  # внутри класса прописываются п
     header = db.Column(db.String(100), nullable=False)  # заголовок
     intro = db.Column(db.String(300), nullable=False)  # краткое описание
     text = db.Column(db.Text, nullable=False)  # описание
-    date = db.Column(db.DateTime, default=datetime.utcnow)  # дата и время (по умолчанию "сейчас")
+    date = db.Column(db.DateTime, default=datetime.now)  # дата и время (по умолчанию "сейчас")
 
     def __repr__(self):
-        return "<Article %r>" % self.id
+        return f"Task: {self.id}"
 # ----------------------------------------------------------------------------------------------------------------------
 
 
