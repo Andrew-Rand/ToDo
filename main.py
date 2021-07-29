@@ -21,15 +21,18 @@ class Task(db.Model):  # внутри класса прописываются п
 
     def __repr__(self):
         return "<Article %r>" % self.id
-# --------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 
 
-# --------------обработка url------------------------------------------------------------
+# --------------обработка url-------------------------------------------------------------------------------------------
+
+# ----------------приветствие-------------------------------------------------------------------------------------------
 @app.route('/hello')
 def hello():
     return render_template('index.html')
 
 
+# ------------------Главная страница------------------------------------------------------------------------------------
 @app.route('/')
 @app.route('/main')
 def main():
@@ -37,6 +40,7 @@ def main():
     return render_template('main.html', tasks=tasks)
 
 
+# ------------------------Форма создания задачи-------------------------------------------------------------------------
 @app.route('/create', methods=['POST', 'GET'])  # url может отрабатывать в post (когда отправлка формы) либо прямой заход
 def create():
     if request.method == "POST":
@@ -63,17 +67,56 @@ def create():
         return render_template('create.html')
 
 
+# ------------------------Форма редактирования задачи-------------------------------------------------------------------
+@app.route('/tasks/<int:id>/update', methods=['POST', 'GET'])
+def update(id):
+    detail_task = Task.query.get(id)
+    if request.method == "POST":
+
+        # 1) Заполняем атрибуты объекта данными из формы
+
+        detail_task.header = request.form['header']
+        detail_task.intro = request.form['intro']
+        detail_task.text = request.form['text']
+
+        # 2) Обновление записи в базе данных
+
+        try:
+            db.session.commit()  # должно обновить запись в бд без всяких update O_o
+            return redirect('/')
+        except:
+            return "Я что-то нажал и всё исчезло"  # Добавь обработку разных ошибок
+
+    else:
+        return render_template('task_update.html', detail_task=detail_task)
+
+
+# ------------------------Форма детального отображения задачи-----------------------------------------------------------
 @app.route('/tasks/<int:id>')
 def tasks_detail(id):
-    detail_task = Task.query.get(id)
+    detail_task = Task.query.get(id)  # забрать из базы данных значение по конкретному id
     return render_template('task_detail.html', task=detail_task)
 
 
+# ------------------------Форма удаления записи-------------------------------------------------------------------------
+@app.route('/tasks/<int:id>/delete')
+def tasks_delete(id):
+    detail_task = Task.query.get_or_404(id)  # если записи нет, будет ошибка 404
+    try:
+        db.session.delete(detail_task)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return "При удалении статьи произошла ошибка"  # добавить обработку разных ошибок и окно подтверждения удаления
+
+
+# ---------------------рендер о нас-------------------------------------------------------------------------------------
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 
+# -----------------------Заготовка для авторизации----------------------------------------------------------------------
 @app.route('/user/<string:username>/<int:id>')  # Обработка любых username и id
 def user(username, id):
     return f"user page: {username}, id: {id}"

@@ -11,6 +11,8 @@
       <p><b>Дата: {{ task.date.date() }} Время: {{ task.date.time() }}</b><p>
       <h5>{{ task.intro}}</h5>
       <p>{{task.text}}</p>
+      <a href="/tasks/{{ task.id }}/update" class="btn btn-warning">Редактировать запись</a>
+      <a href="/tasks/{{ task.id }}/delete" class="btn btn-danger">Удалить запись</a>
     </div>
 
 </div>

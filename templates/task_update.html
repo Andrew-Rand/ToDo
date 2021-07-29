@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+     Обновление задачи
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <h3>Обновить задачу</h3>
+
+    <form method = "POST">
+        <h5>Заголовок</h5>
+        <input type="text" name="header" id="header" class="form-control" value="{{ detail_task.header }}" placeholder="Введите заголовок"><br>
+        <h5>Краткое описание</h5>
+        <textarea name="intro" id="intro" class="form-control">{{ detail_task.intro }}</textarea><br>
+        <h5>Основной текст задачи</h5>
+        <textarea name="text" id="text" class="form-control">{{ detail_task.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Обновить задачу">
+    </form>
+    </div>
+{% endblock %}
