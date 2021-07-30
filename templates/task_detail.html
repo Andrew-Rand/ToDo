@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ task.header }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h3>{{ task.header }}</h3>
+    <div class="alert alert-info">
+      <p><b>Дата: {{ task.date.date() }} Время: {{ task.date.time() }}</b><p>
+      <h5>{{ task.intro}}</h5>
+      <p>{{task.text}}</p>
+      <a href="/tasks/{{ task.id }}/update" class="btn btn-warning">Редактировать запись</a>
+      <a href="/tasks/{{ task.id }}/delete" class="btn btn-danger">Удалить запись</a>
+    </div>
+
+</div>
+{% endblock %}
