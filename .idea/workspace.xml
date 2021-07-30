@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4c2f4c0-5199-47d1-852f-7a804bd72cb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+              <first_editor relative-caret-position="814">
+                <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
@@ -209,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627626515241</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update readme.md">
+      <created>1627627725649</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627627725649</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -222,8 +228,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1010" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19475357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -251,7 +256,8 @@
     <MESSAGE value="For now it works with mySQL server/todo.db/task&#10;added new templates for task`s list and detail task" />
     <MESSAGE value="web app is able to add, update and delete tasks. &#10;!!!You should add good exception handlers!!!" />
     <MESSAGE value="start doing readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="start doing readme" />
+    <MESSAGE value="update readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme.md" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
@@ -330,8 +336,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+          <first_editor relative-caret-position="814">
+            <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>
