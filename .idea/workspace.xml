@@ -29,8 +29,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="695">
-                <caret line="113" selection-start-line="113" selection-end-line="113" />
+              <first_editor relative-caret-position="408">
+                <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -87,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,7 +104,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627556991890</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="start doing readme">
+      <created>1627626515241</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1627626515241</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -216,6 +223,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19475357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -227,7 +235,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32915717" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32915717" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32915717" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.33257404" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -242,7 +250,8 @@
     <MESSAGE value="For now it works with mySQL server/todo.db/task" />
     <MESSAGE value="For now it works with mySQL server/todo.db/task&#10;added new templates for task`s list and detail task" />
     <MESSAGE value="web app is able to add, update and delete tasks. &#10;!!!You should add good exception handlers!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="web app is able to add, update and delete tasks. &#10;!!!You should add good exception handlers!!!" />
+    <MESSAGE value="start doing readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="start doing readme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
@@ -301,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -318,11 +320,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="695">
-            <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <first_editor relative-caret-position="408">
+            <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>
