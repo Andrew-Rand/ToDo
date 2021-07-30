@@ -56,6 +56,9 @@ MySQL 5.7 Command Line Client
 
 #### Congratulations, you have configured your local mysql server!
 
+Of course, you can use your favorite database with user in your own. For this change string number 9 in
+main.py and create connection to your database or your user.
+
 If you have installed all what you need, you can run this app in your terminal. 
 Just go in the project directory ToDo and write:
 

@@ -6,7 +6,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 "app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1111@localhost/todo'  # выбор базы данных"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user='root', password='1111', server='localhost', database='todo')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user='root', password='3141', server='localhost', database='todo')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # отключить ворнинг
 db = SQLAlchemy(app)
 
